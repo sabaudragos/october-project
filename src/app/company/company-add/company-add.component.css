@@ -1,0 +1,28 @@
+.company-main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-item {
+  width: 30%;
+}
+
+.city-country-box {
+  display: flex;
+  gap: 20px;
+}
+
+.email-phone-box {
+  display: flex;
+  gap: 20px;
+}
+
+.email-phone-box-item {
+  flex-grow: 1;
+}
+
+.back-save-box {
+  display: flex;
+  gap: 20px;
+}
