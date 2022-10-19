@@ -11,4 +11,16 @@ export class CompanyService {
   create(company: Company): Observable<Company> {
     return this.httpClient.post<Company>("/api/company", company);
   }
+
+  update(company: Company): Observable<Company> {
+    return this.httpClient.put<Company>("/api/company", company);
+  }
+
+  getAll(): Observable<Company[]> {
+    return this.httpClient.get<Company[]>("/api/company/all");
+  }
+
+  getById(id: string): Observable<Company> {
+    return this.httpClient.get<Company>("/api/company/" + id);
+  }
 }

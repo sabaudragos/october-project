@@ -12,11 +12,17 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
 import {CompanyService} from "./service/company-service";
+import {ToastrModule} from "ngx-toastr";
+import { CompaniesPageComponent } from './company/companies-page/companies-page.component';
+import {MatTableModule} from "@angular/material/table";
+import { CompanyUpdateComponent } from './company/company-update/company-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompanyAddComponent
+    CompanyAddComponent,
+    CompaniesPageComponent,
+    CompanyUpdateComponent
   ],
   imports: [
     AppRoutingModule,
@@ -27,7 +33,9 @@ import {CompanyService} from "./service/company-service";
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    MatTableModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [Location, CompanyService],
   bootstrap: [AppComponent]

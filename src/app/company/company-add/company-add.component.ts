@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Location} from '@angular/common';
 import {CompanyService} from "../../service/company-service";
 import {Company} from "../../model/company";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-company-add',
@@ -14,7 +15,8 @@ export class CompanyAddComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private location: Location,
-              private companyService: CompanyService) {
+              private companyService: CompanyService,
+              private toastr: ToastrService) {
     this.formControlGroup = this.formBuilder.group({
       'name': new FormControl(),
       'address': new FormControl(),
@@ -47,9 +49,14 @@ export class CompanyAddComponent implements OnInit {
 
     this.companyService.create(company).subscribe((company) => {
       if(company) {
-        console.log("A new company has been created: ", company)
+        console.log("A new company has been created: ", company);
+        this.showSuccess(company.name);
       }
     });
+  }
+
+  showSuccess(companyName: string) {
+    this.toastr.success('Company ' + companyName + " was created", 'Company add');
   }
 
 }
