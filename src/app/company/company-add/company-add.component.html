@@ -1,53 +1,55 @@
-<div class="company-main-box" [formGroup]="formControlGroup">
-  <h1>Company Add</h1>
-  <mat-form-field appearance="outline" class="form-item">
-    <input matInput
-           placeholder="Company name"
-           formControlName='name'>
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="form-item">
-    <input matInput
-           placeholder="Company address"
-           formControlName='address'>
-  </mat-form-field>
-  <div class="form-item city-country-box">
-    <mat-form-field appearance="outline">
+<div class="main-box">
+  <div class="company-main-box" [formGroup]="formControlGroup">
+    <h1>Company Add</h1>
+    <mat-form-field appearance="outline" class="form-item">
       <input matInput
-             placeholder="City"
-             formControlName='city'>
+             placeholder="Company name"
+             formControlName='name'>
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="form-item">
       <input matInput
-             placeholder="Country"
-             formControlName='country'>
+             placeholder="Company address"
+             formControlName='address'>
     </mat-form-field>
-  </div>
-  <div class="form-item email-phone-box">
-    <mat-form-field appearance="outline" class="form-item email-phone-box-item">
+    <div class="form-item city-country-box">
+      <mat-form-field appearance="outline">
+        <input matInput
+               placeholder="City"
+               formControlName='city'>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput
+               placeholder="Country"
+               formControlName='country'>
+      </mat-form-field>
+    </div>
+    <div class="form-item email-phone-box">
+      <mat-form-field appearance="outline" class="form-item email-phone-box-item">
+        <input matInput
+               placeholder="Email"
+               formControlName='email'>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item email-phone-box-item">
+        <input matInput
+               placeholder="Phone"
+               formControlName='phone'>
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline" class="form-item">
       <input matInput
-             placeholder="Email"
-             formControlName='email'>
+             placeholder="Registration Number"
+             formControlName='registrationNumber'>
     </mat-form-field>
-    <mat-form-field appearance="outline" class="form-item email-phone-box-item">
+    <mat-form-field appearance="outline" class="form-item">
       <input matInput
-             placeholder="Phone"
-             formControlName='phone'>
+             placeholder="VAT Number"
+             formControlName='vatNumber'>
     </mat-form-field>
-  </div>
-  <mat-form-field appearance="outline" class="form-item">
-    <input matInput
-           placeholder="Registration Number"
-           formControlName='registrationNumber'>
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="form-item">
-    <input matInput
-           placeholder="VAT Number"
-           formControlName='vatNumber'>
-  </mat-form-field>
 
-  <div class="back-save-box">
-    <button mat-raised-button (click)='goBack()'>Back</button>
-    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
-  </div>
+    <div class="back-save-box">
+      <button mat-raised-button (click)='goBack()'>Back</button>
+      <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    </div>
 
+  </div>
 </div>
