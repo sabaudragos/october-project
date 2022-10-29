@@ -1,0 +1,35 @@
+<div class="main-box">
+  <h1>Companies</h1>
+  <div class="companies-box">
+    <button mat-raised-button routerLink='/company/add' color="primary">Add company</button>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name</th>
+        <td mat-cell *matCellDef="let element" routerLink='/company/{{element.id}}/update'
+            class="item-hover"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email</th>
+        <td mat-cell *matCellDef="let element" routerLink='/company/{{element.id}}/update'
+            class="item-hover"> {{element.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef> City</th>
+        <td mat-cell *matCellDef="let element" routerLink='/company/{{element.id}}/update'
+            class="item-hover"> {{element.city}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> Country</th>
+        <td mat-cell *matCellDef="let element" routerLink='/company/{{element.id}}/update'
+            class="item-hover"> {{element.country}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
