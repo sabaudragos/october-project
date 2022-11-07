@@ -5,30 +5,16 @@
   margin-top: 20px;
 }
 
-.company-main-box {
+.project-main-box {
   display: flex;
   flex-direction: column;
+  min-width: 400px;
   padding: 20px;
   box-shadow: 0 0 50px #ccc;
-  min-width: 400px;
 }
 
 .form-item {
   width: 100%;
-}
-
-.city-country-box {
-  display: flex;
-  gap: 20px;
-}
-
-.email-phone-box {
-  display: flex;
-  gap: 20px;
-}
-
-.email-phone-box-item {
-  flex-grow: 1;
 }
 
 .back-save-box {

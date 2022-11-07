@@ -1,6 +1,6 @@
 <div class="main-box">
   <div class="company-main-box" [formGroup]="formControlGroup">
-    <h1>Company Add</h1>
+    <h1>Add Company</h1>
     <mat-form-field appearance="outline" class="form-item">
       <input matInput
              placeholder="Company name"
@@ -12,12 +12,12 @@
              formControlName='address'>
     </mat-form-field>
     <div class="form-item city-country-box">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="form-item email-phone-box-item">
         <input matInput
                placeholder="City"
                formControlName='city'>
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="form-item email-phone-box-item">
         <input matInput
                placeholder="Country"
                formControlName='country'>

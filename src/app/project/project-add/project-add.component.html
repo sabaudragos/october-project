@@ -1,0 +1,23 @@
+<div class="main-box">
+  <div class="project-main-box" [formGroup]="formControlGroup">
+    <h1>Add Project</h1>
+    <mat-form-field appearance="outline" class="form-item">
+      <input matInput
+             placeholder="Project name"
+             formControlName='name'>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-item">
+      <textarea matInput class=""
+                placeholder="Project description"
+                rows="10"
+                formControlName='description'>
+      </textarea>
+    </mat-form-field>
+
+    <div class="back-save-box">
+      <button mat-raised-button (click)='goBack()'>Back</button>
+      <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    </div>
+
+  </div>
+</div>

@@ -16,13 +16,20 @@ import {ToastrModule} from "ngx-toastr";
 import { CompaniesPageComponent } from './company/companies-page/companies-page.component';
 import {MatTableModule} from "@angular/material/table";
 import { CompanyUpdateComponent } from './company/company-update/company-update.component';
+import { ProjectUpdateComponent } from './project/project-update/project-update.component';
+import { ProjectAddComponent } from './project/project-add/project-add.component';
+import { ProjectsPageComponent } from './project/projects-page/projects-page.component';
+import {ProjectService} from "./service/project-service";
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyAddComponent,
     CompaniesPageComponent,
-    CompanyUpdateComponent
+    CompanyUpdateComponent,
+    ProjectUpdateComponent,
+    ProjectAddComponent,
+    ProjectsPageComponent
   ],
   imports: [
     AppRoutingModule,
@@ -37,7 +44,7 @@ import { CompanyUpdateComponent } from './company/company-update/company-update.
     ReactiveFormsModule,
     ToastrModule.forRoot()
   ],
-  providers: [Location, CompanyService],
+  providers: [Location, CompanyService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,7 +16,6 @@ export class CompaniesPageComponent implements OnInit {
   ngOnInit(): void {
     this.companyService.getAll().subscribe(companyArray => {
       if (companyArray) {
-        console.log("Get all= " + JSON.stringify(companyArray));
         this.dataSource = companyArray;
       }
     })
