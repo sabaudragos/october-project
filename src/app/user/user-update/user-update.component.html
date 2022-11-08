@@ -1,0 +1,27 @@
+<div class="main-box">
+  <div class="user-main-box" [formGroup]="formControlGroup">
+    <h1>Add User</h1>
+    <mat-form-field appearance="outline" class="form-item">
+      <input matInput
+             placeholder="First name"
+             formControlName='firstName'>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-item">
+      <input matInput
+             placeholder="Last name"
+             formControlName='lastName'>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-item">
+      <input matInput
+             placeholder="Email"
+             formControlName='email'>
+    </mat-form-field>
+
+
+    <div class="back-save-box">
+      <button mat-raised-button (click)='goBack()'>Back</button>
+      <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    </div>
+
+  </div>
+</div>

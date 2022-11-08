@@ -25,6 +25,10 @@ import {LOCAL_STORAGE} from 'ngx-webstorage-service';
 import {RemoveConfirmationDialogComponent} from './dialog/remove-confirmation-dialog/remove-confirmation-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { UserAddComponent } from './user/user-add/user-add.component';
+import { UserUpdateComponent } from './user/user-update/user-update.component';
+import { UsersPageComponent } from './user/users-page/users-page.component';
+import {UserService} from "./service/user-service";
 
 @NgModule({
   declarations: [
@@ -36,6 +40,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     ProjectAddComponent,
     ProjectsPageComponent,
     RemoveConfirmationDialogComponent,
+    UserAddComponent,
+    UserUpdateComponent,
+    UsersPageComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -53,10 +60,11 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     ToastrModule.forRoot()
   ],
   providers: [
-    Location,
     CompanyService,
-    ProjectService,
+    Location,
     LocalStorageService,
+    ProjectService,
+    UserService,
     {provide: LOCAL_STORAGE_SERVICE, useExisting: LOCAL_STORAGE},],
   bootstrap: [AppComponent]
 })

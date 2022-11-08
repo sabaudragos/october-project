@@ -1,0 +1,24 @@
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-main-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 50px #ccc;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.back-save-box {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+}
