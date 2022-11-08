@@ -5,6 +5,7 @@ import {ProjectService} from "../../service/project-service";
 import {ToastrService} from "ngx-toastr";
 import {Project} from "../../model/project";
 import {Company} from "../../model/company";
+import {LocalStorageService} from "../../service/localstorage-service";
 
 @Component({
   selector: 'app-project-add',
@@ -17,7 +18,8 @@ export class ProjectAddComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private location: Location,
               private projectService: ProjectService,
-              private toastr: ToastrService) {
+              private toastr: ToastrService,
+              private localStorageService: LocalStorageService) {
     this.formControlGroup = this.formBuilder.group({
       'name': new FormControl(),
       'description': new FormControl()
@@ -33,7 +35,7 @@ export class ProjectAddComponent implements OnInit {
     project.name = this.formControlGroup.controls['name'].value;
     project.description = this.formControlGroup.controls['description'].value;
     let company = new Company();
-    company.id = 1;
+    company.id = this.localStorageService.getCompanyId();
     project.company = company;
 
     this.projectService.create(project).subscribe((project) => {

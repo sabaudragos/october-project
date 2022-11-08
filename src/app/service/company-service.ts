@@ -23,4 +23,8 @@ export class CompanyService {
   getById(id: string): Observable<Company> {
     return this.httpClient.get<Company>("/api/company/" + id);
   }
+
+  deleteById(id: number): Observable<void> {
+    return this.httpClient.delete<void>("/api/company/" + id);
+  }
 }

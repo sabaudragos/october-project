@@ -6,6 +6,7 @@ import {ToastrService} from "ngx-toastr";
 import {Project} from "../../model/project";
 import {ActivatedRoute} from "@angular/router";
 import {Company} from "../../model/company";
+import {LocalStorageService} from "../../service/localstorage-service";
 
 @Component({
   selector: 'app-project-update',
@@ -20,7 +21,8 @@ export class ProjectUpdateComponent implements OnInit {
               private location: Location,
               private projectService: ProjectService,
               private route: ActivatedRoute,
-              private toastr: ToastrService) {
+              private toastr: ToastrService,
+              private localStorageService: LocalStorageService) {
     this.formControlGroup = this.formBuilder.group({
       'name': new FormControl(),
       'description': new FormControl()
@@ -47,7 +49,7 @@ export class ProjectUpdateComponent implements OnInit {
     project.name = this.formControlGroup.controls['name'].value;
     project.description = this.formControlGroup.controls['description'].value;
     let company = new Company();
-    company.id = 1;
+    company.id = this.localStorageService.getCompanyId();
     project.company = company;
 
     this.projectService.update(project).subscribe((savedProject) => {

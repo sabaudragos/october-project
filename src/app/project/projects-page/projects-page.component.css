@@ -16,5 +16,5 @@ table {
 
 .mat-row:hover {
   cursor: pointer;
-  text-decoration: underline;
+  background-color: #eed870;
 }
