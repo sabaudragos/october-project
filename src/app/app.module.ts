@@ -29,6 +29,14 @@ import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { UsersPageComponent } from './user/users-page/users-page.component';
 import {UserService} from "./service/user-service";
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { SideDrawerComponent } from './side-drawer/side-drawer.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {SideNavService} from "./service/side-nav-service";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -43,6 +51,8 @@ import {UserService} from "./service/user-service";
     UserAddComponent,
     UserUpdateComponent,
     UsersPageComponent,
+    HeaderComponent,
+    SideDrawerComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -53,7 +63,12 @@ import {UserService} from "./service/user-service";
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatSidenavModule,
     MatTableModule,
+    MatToolbarModule,
     ReactiveFormsModule,
     MatDialogModule,
     MatPaginatorModule,
@@ -64,6 +79,7 @@ import {UserService} from "./service/user-service";
     Location,
     LocalStorageService,
     ProjectService,
+    SideNavService,
     UserService,
     {provide: LOCAL_STORAGE_SERVICE, useExisting: LOCAL_STORAGE},],
   bootstrap: [AppComponent]

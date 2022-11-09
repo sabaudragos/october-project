@@ -1,0 +1,12 @@
+<mat-toolbar class="header-box">
+  <span class="material-icons menu-icon" [matMenuTriggerFor]="menu">
+    menu
+  </span>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'/companies'">Companies</button>
+    <button mat-menu-item [routerLink]="'/projects'">Projects</button>
+    <button mat-menu-item [routerLink]="'/users'">Users</button>
+  </mat-menu>
+  <span>October Project</span>
+</mat-toolbar>
+
