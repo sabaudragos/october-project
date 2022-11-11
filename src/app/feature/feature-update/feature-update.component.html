@@ -1,0 +1,48 @@
+<div class="feature-box">
+  <div class="feature-main-box" [formGroup]="formControlGroup">
+    <h1 class="title">Add Feature</h1>
+    <div class="feature-content-box">
+      <div class="feature-primary-content-item">
+        <mat-form-field appearance="outline" class="form-item">
+          <input matInput
+                 placeholder="Feature title"
+                 formControlName='title'>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-item">
+      <textarea matInput class=""
+                placeholder="Feature description"
+                rows="11"
+                formControlName='description'>
+      </textarea>
+        </mat-form-field>
+      </div>
+      <div class="feature-secondary-content-item">
+        <mat-form-field appearance="outline" class="form-item">
+          <input matInput
+                 placeholder="Status"
+                 formControlName='status'>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-item">
+          <input matInput
+                 placeholder="Priority"
+                 formControlName='priority'>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-item">
+          <input matInput
+                 placeholder="Estimation"
+                 formControlName='estimation'>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-item">
+          <input matInput
+                 placeholder="User"
+                 formControlName='user'>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="back-save-box">
+      <button mat-raised-button (click)='goBack()'>Back</button>
+      <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    </div>
+
+  </div>
+</div>

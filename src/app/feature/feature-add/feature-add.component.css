@@ -1,38 +1,43 @@
-.main-box {
+.feature-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
 }
 
-.company-main-box {
+.feature-main-box {
   display: flex;
   flex-direction: column;
+  min-width: 400px;
+  max-width: 800px;
   padding: 20px;
   box-shadow: 0 0 20px #ccc;
-  min-width: 400px;
+}
+
+.feature-content-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-primary-content-item {
+  flex:4;
+}
+
+.feature-secondary-content-item {
+  flex: 1;
 }
 
 .form-item {
   width: 100%;
 }
 
-.city-country-box {
-  display: flex;
-  gap: 20px;
-}
-
-.email-phone-box {
-  display: flex;
-  gap: 20px;
-}
-
-.email-phone-box-item {
-  flex-grow: 1;
-}
-
 .back-save-box {
   display: flex;
   gap: 20px;
+  align-self: center;
+}
+
+.title {
   align-self: center;
 }

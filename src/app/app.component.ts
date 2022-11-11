@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LocalStorageService} from "./service/localstorage-service";
+import {Car} from "./testing-classes/car";
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.localStorageService.setCompanyId(1);
+    this.localStorageService.setProjectId(6);
   }
 }

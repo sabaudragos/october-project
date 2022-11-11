@@ -25,6 +25,14 @@ export class LocalStorageService {
     return this.set("CompanyId", id);
   }
 
+  getProjectId(): any {
+    return this.get("ProjectId");
+  }
+
+  setProjectId(id: number): any {
+    return this.set("ProjectId", id);
+  }
+
   remove(key: string) {
     this.storage.remove(key);
   }

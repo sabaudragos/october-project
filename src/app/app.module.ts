@@ -37,6 +37,10 @@ import {SideNavService} from "./service/side-nav-service";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import {MatMenuModule} from "@angular/material/menu";
+import { FeaturesPageComponent } from './feature/feature-page/features-page.component';
+import { FeatureAddComponent } from './feature/feature-add/feature-add.component';
+import { FeatureUpdateComponent } from './feature/feature-update/feature-update.component';
+import {FeatureService} from "./service/feature-service";
 
 @NgModule({
   declarations: [
@@ -53,6 +57,9 @@ import {MatMenuModule} from "@angular/material/menu";
     UsersPageComponent,
     HeaderComponent,
     SideDrawerComponent,
+    FeaturesPageComponent,
+    FeatureAddComponent,
+    FeatureUpdateComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -76,6 +83,7 @@ import {MatMenuModule} from "@angular/material/menu";
   ],
   providers: [
     CompanyService,
+    FeatureService,
     Location,
     LocalStorageService,
     ProjectService,

@@ -9,6 +9,9 @@ import {ProjectsPageComponent} from "./project/projects-page/projects-page.compo
 import {UserAddComponent} from "./user/user-add/user-add.component";
 import {UserUpdateComponent} from "./user/user-update/user-update.component";
 import {UsersPageComponent} from "./user/users-page/users-page.component";
+import {FeatureAddComponent} from "./feature/feature-add/feature-add.component";
+import {FeatureUpdateComponent} from "./feature/feature-update/feature-update.component";
+import {FeaturesPageComponent} from "./feature/feature-page/features-page.component";
 
 const routes: Routes = [
   {path: 'company/add', component: CompanyAddComponent},
@@ -20,6 +23,9 @@ const routes: Routes = [
   {path: 'user/add', component: UserAddComponent},
   {path: 'user/:id/update', component: UserUpdateComponent},
   {path: 'users', component: UsersPageComponent},
+  {path: 'feature/add', component: FeatureAddComponent},
+  {path: 'feature/:id/update', component: FeatureUpdateComponent},
+  {path: 'features', component: FeaturesPageComponent},
 ];
 
 @NgModule({
