@@ -1,0 +1,12 @@
+.footer-box {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  background-color: darkred;
+  height: 100px;
+}
+
+.content-box {
+  margin-left: 100px;
+}

@@ -41,6 +41,8 @@ import { FeaturesPageComponent } from './feature/feature-page/features-page.comp
 import { FeatureAddComponent } from './feature/feature-add/feature-add.component';
 import { FeatureUpdateComponent } from './feature/feature-update/feature-update.component';
 import {FeatureService} from "./service/feature-service";
+import { FooterComponent } from './footer/footer.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import {FeatureService} from "./service/feature-service";
     FeaturesPageComponent,
     FeatureAddComponent,
     FeatureUpdateComponent,
+    FooterComponent,
+    MainPageComponent,
   ],
   imports: [
     AppRoutingModule,

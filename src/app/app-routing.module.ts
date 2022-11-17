@@ -12,8 +12,10 @@ import {UsersPageComponent} from "./user/users-page/users-page.component";
 import {FeatureAddComponent} from "./feature/feature-add/feature-add.component";
 import {FeatureUpdateComponent} from "./feature/feature-update/feature-update.component";
 import {FeaturesPageComponent} from "./feature/feature-page/features-page.component";
+import {MainPageComponent} from "./main-page/main-page.component";
 
 const routes: Routes = [
+  {path: '', component: MainPageComponent},
   {path: 'company/add', component: CompanyAddComponent},
   {path: 'company/:id/update', component: CompanyUpdateComponent},
   {path: 'companies', component: CompaniesPageComponent},
