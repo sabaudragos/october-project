@@ -43,6 +43,8 @@ import { FeatureUpdateComponent } from './feature/feature-update/feature-update.
 import {FeatureService} from "./service/feature-service";
 import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { FeatureCardComponent } from './feature-card/feature-card.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -64,6 +66,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     FeatureUpdateComponent,
     FooterComponent,
     MainPageComponent,
+    FeatureCardComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -72,6 +75,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     FormsModule,
     HttpClientModule,
     MatButtonModule,
+    MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,

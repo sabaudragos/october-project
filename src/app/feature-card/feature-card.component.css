@@ -1,0 +1,21 @@
+.card-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-width: 250px;
+  min-height: 150px;
+  background-color: #eed870;
+}
+
+.header-box {
+  border-bottom: 1px solid white;
+}
+
+.content-box {
+  min-height: 135px;
+  background-color: white;
+}
+
+.footer-box {
+  border-top: 1px solid white;
+}

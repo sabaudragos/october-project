@@ -1,6 +1,6 @@
 .header-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   background-color: #fff;
   box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.3);
@@ -13,4 +13,8 @@
 
 .page-title {
   cursor: pointer;
+}
+
+.company-select {
+  font-size: 11px;
 }

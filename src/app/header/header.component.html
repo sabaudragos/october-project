@@ -9,5 +9,15 @@
     <button mat-menu-item [routerLink]="'/features'">Features</button>
   </mat-menu>
   <span [routerLink]="''" class="page-title">October Project</span>
+  <div>
+    <mat-form-field appearance="outline" class="company-select">
+      <mat-label>Company</mat-label>
+      <mat-select (selectionChange) = "onChange($event)">
+        <mat-option *ngFor="let company of companies" [value]="company.id">
+          {{company.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </mat-toolbar>
 
