@@ -14,7 +14,7 @@ import {RemoveConfirmationDialogComponent} from "../../dialog/remove-confirmatio
 })
 export class FeaturesPageComponent implements OnInit {
 
-  displayedColumns: string[] = ['title', 'description', 'project', 'delete'];
+  displayedColumns: string[] = ['title', 'featureStatus', 'description', 'project', 'delete'];
   dataSource = new MatTableDataSource<Feature>([]);
 
   constructor(private featureService: FeatureService,

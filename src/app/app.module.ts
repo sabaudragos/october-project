@@ -45,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
 import {MatCardModule} from "@angular/material/card";
+import {StatusService} from "./service/status-service";
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import {MatCardModule} from "@angular/material/card";
     LocalStorageService,
     ProjectService,
     SideNavService,
+    StatusService,
     UserService,
     {provide: LOCAL_STORAGE_SERVICE, useExisting: LOCAL_STORAGE},],
   bootstrap: [AppComponent]

@@ -18,9 +18,12 @@
       </div>
       <div class="feature-secondary-content-item">
         <mat-form-field appearance="outline" class="form-item">
-          <input matInput
-                 placeholder="Status"
-                 formControlName='status'>
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option *ngFor="let status of statusList" [value]="status.id">
+              {{status.name}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-item">
           <input matInput
